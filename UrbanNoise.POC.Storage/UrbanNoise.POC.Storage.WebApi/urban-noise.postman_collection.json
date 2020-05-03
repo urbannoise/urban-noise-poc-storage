@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "b75cad88-e180-4704-912d-26b980863ccf",
+		"name": "urban-noise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-noise-records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/noiserecords?city=barcelona&street=mallorca&number=194&rangetimestart=2020-05-01T13:34:00.000&rangeTimeEnd=2020-05-03T13:34:00.000&pageIndex=0&pageSize=50",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"noiserecords"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "barcelona"
+						},
+						{
+							"key": "street",
+							"value": "mallorca"
+						},
+						{
+							"key": "number",
+							"value": "194"
+						},
+						{
+							"key": "rangetimestart",
+							"value": "2020-05-01T13:34:00.000"
+						},
+						{
+							"key": "rangeTimeEnd",
+							"value": "2020-05-03T13:34:00.000"
+						},
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-noice-record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"City\": \"barcelona\",\n    \"street\": \"mallorca\",\n    \"number\": 194,\n    \"starttime\": \"2020-05-01T13:34:00.000\",\n    \"instants\": [\n        0.3,\n        0.5,\n        1.4\n    ],\n    \"intensities\": [\n        1,\n        3,\n        1.3\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/noiserecords",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"noiserecords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-noise-record",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"City\": \"barcelona\",\n    \"street\": \"mallorca\",\n    \"number\": 194,\n    \"starttime\": \"2020-05-01T13:34:00.000\",\n    \"instants\": [\n        0.3,\n        0.5,\n        1.7\n    ],\n    \"intensities\": [\n        1,\n        4,\n        1.3\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/noiserecords",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"noiserecords"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
